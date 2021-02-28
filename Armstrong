@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+        System.out.println("lutfen bir sayi giriniz...:");
+        int sayi = scanner.nextInt();
+        System.out.println("lutfen girdiğiniz sayının basamak sayısını giriniz....:");
+        int basamakSayisi = scanner.nextInt();
+        int toplam=0;
+        int gecici_sayi = sayi;
+        do{
+        int basamakDegeri = gecici_sayi % 10;
+        gecici_sayi /= 10;
+        toplam += Math.pow(basamakDegeri, basamakSayisi);
+        }while(gecici_sayi>0);
+      if (sayi==toplam){
+        System.out.println("girdiğiniz sayı bir armstrong sayisidir....");
+                }
+       else {
+         System.out.println("girdiğiniz sayi bir armstrong sayisi değildir....");
+                }
+
+                           
+                
+                
+        
+        
+        
+        
+    }
